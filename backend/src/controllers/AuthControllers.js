@@ -1,4 +1,4 @@
-import Users from "../models/UsersSchema.js";
+import Users from "../models/UserSchema.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { uploadImg } from "../config/cloudinary.js";
@@ -383,7 +383,7 @@ const forgotPassword = async (req, res) => {
     user.resetPasswordExpires = Date.now() + 15 * 60 * 1000;
     await user.save();
 
-    const frontendUrl = process.env.FRONTEND_URL || "https://complete-ten-classes-practice-memb.vercel.app";
+    const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
     const resetUrl = `${frontendUrl}/reset-password/${resetToken}`;
 
     try {
