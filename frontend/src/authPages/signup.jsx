@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1/auth'
+const API_URL = import.meta.env.VITE_API_URL || 'https://backend-assignment-6-topaz.vercel.app/api/v1/auth'
 
 const AuthInput = ({ type, placeholder, name, value, onChange }) => (
   <input
